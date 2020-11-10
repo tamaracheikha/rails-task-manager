@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'tasks/new', to: 'tasks#new'
   post 'tasks', to: 'restaurant#create'
   # As a user, I can view the details of a task
-  get 'tasks/:id', to: 'tasks#show'
+  get 'tasks/:id', to: 'tasks#show', as: :task
   # As a user, I can edit a task (mark as completed / update title & details)
   get 'tasks/:id/edit', to: 'tasks#edit'
   patch 'tasks/:id', to: 'tasks#update'
